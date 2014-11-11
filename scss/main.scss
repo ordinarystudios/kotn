@@ -1,0 +1,170 @@
+@import "normalize", "bourbon", "neat";
+
+
+// Variables
+
+$black: rgba(0,0,0,0.87);
+$serif: "Calluna", serif;
+$sans: "CircularStd-Bold", "Circular", sans-serif;
+
+* {
+	-webkit-font-smoothing: antialiased;
+}
+
+body {	
+	color: $black;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+section {
+  @include outer-container;
+  aside { @include span-columns(7);  @include shift(1); }
+  article { @include span-columns(4); }
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 2rem;
+}
+p {
+	font-family: $serif;
+
+	font-weight: 600;
+
+	&.lead {
+		font-size: 50px;
+		line-height: 1;
+		font-weight: 100;
+		clear: both;
+		margin-top: 2rem;
+	}	
+}
+
+
+h1 {
+	font-family: $sans;
+	font-size: 1.75em;
+	font-weight: bold;
+	line-height: 1;
+	letter-spacing: 0.2857em;
+	padding-left: .875rem;
+	padding-right: 0.3375rem;
+	padding-bottom: .5rem;
+	padding-top: .5rem;
+	border: .25rem solid $black;
+	display: inline-block;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+
+.box {
+	border: .25rem solid $black;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-top: 2rem;
+	float: left;
+	margin-bottom: 2rem;
+	
+	h1 {
+		border: none;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	.lead {
+		margin: 2rem 0;
+		margin-top: 1rem;
+	}
+	
+	.label {
+		font-family: "CircularStd-Book";
+		font-weight: normal;
+		letter-spacing: .5px;
+		font-size: 15px;
+		color: rgba(0,0,0,0.87);
+		line-height: 19px;
+		margin-top: 0;
+		padding-bottom: 0.5rem;
+	}
+}
+
+.box.hover {
+		
+		
+		padding: 0;
+		margin: 0;
+		width: 8.5rem;
+		height: 3.25rem;
+		
+		transition: all 0.2s ease;
+		
+
+		* {
+			transition: all 0.3s ease;
+		}
+
+		
+		h1 {
+			font-family: $sans;
+			font-size: 1.75em;
+			font-weight: bold;
+			line-height: 1;
+			letter-spacing: 0.2857em;
+			padding-left: .875rem;
+			padding-right: 0.3375rem;
+			padding-bottom: .5rem;
+			padding-top: .5rem;
+			display: inline-block;
+			text-align: center;
+			box-sizing: border-box;
+			margin: 0;
+			transition: all 0.3s ease;
+// 			transition-delay: .1s;
+		}
+		
+
+		.label {
+			color: transparent;
+			font-size: 1px;
+			line-height: 0;
+			height: 0px;
+			width: 15rem;
+ 			transition-delay: .2s;
+			margin: 0;
+			padding: 0;
+			opacity: 0;
+		}
+		
+		&:hover {
+			
+			border: .25rem solid $black;
+			width: 16rem;
+			height: 11rem;
+			
+			h1 {
+				margin: 0.67em 0; 
+			}
+			
+			.label {
+				color: transparent;
+				height: auto;
+				width: auto;
+				display: inline-block;
+				padding-left: .875rem;
+				font-family: "CircularStd-Book";
+				font-weight: normal;
+				letter-spacing: .5px;
+				font-size: 15px;
+				color: rgba(0,0,0,0.87);
+				line-height: 19px;
+				margin-top: 0;
+				padding-bottom: 2rem;
+				opacity: 1;
+			}
+		}
+	}
+
+
