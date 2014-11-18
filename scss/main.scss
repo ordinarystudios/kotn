@@ -195,10 +195,13 @@ h1 {
 	color: $black;
 	line-height: 1.285;
 	letter-spacing: .25*$base;
-	margin: 0.5*$base 0 1.5*$base;
+	margin: 0.7*$base 0 1.7*$base;
 }
 
 form {
+	
+	margin-bottom: $base;
+	
 	input {
 		appearance: none;
 		border: none;
