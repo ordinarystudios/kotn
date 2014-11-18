@@ -1,174 +1,428 @@
 @import "normalize", "bourbon", "neat";
 
+// Fonts
+
+@font-face {
+    font-family: 'sans';
+    src: url('../fonts/sans-regular-webfont.eot');
+    src: url('../fonts/sans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/sans-regular-webfont.woff') format('woff'),
+         url('../fonts/sans-regular-webfont.ttf') format('truetype'),
+         url('../fonts/sans-regular-webfont.svg#sansregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sans';
+    src: url('../fonts/sans-medium-webfont.eot');
+    src: url('../fonts/sans-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sans-medium-webfont.woff2') format('woff2'),
+         url('../fonts/sans-medium-webfont.woff') format('woff'),
+         url('../fonts/sans-medium-webfont.ttf') format('truetype'),
+         url('../fonts/sans-medium-webfont.svg#sansmedium') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sans';
+    src: url('../fonts/sans-bold-webfont.eot');
+    src: url('../fonts/sans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sans-bold-webfont.woff2') format('woff2'),
+         url('../fonts/sans-bold-webfont.woff') format('woff'),
+         url('../fonts/sans-bold-webfont.ttf') format('truetype'),
+         url('../fonts/sans-bold-webfont.svg#sansbold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'serif';
+    src: url('../fonts/serif-regular-webfont.eot');
+    src: url('../fonts/serif-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/serif-regular-webfont.woff2') format('woff2'),
+         url('../fonts/serif-regular-webfont.woff') format('woff'),
+         url('../fonts/serif-regular-webfont.ttf') format('truetype'),
+         url('../fonts/serif-regular-webfont.svg#serifregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'serif';
+    src: url('../fonts/serif-italic-webfont.eot');
+    src: url('../fonts/serif-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/serif-italic-webfont.woff2') format('woff2'),
+         url('../fonts/serif-italic-webfont.woff') format('woff'),
+         url('../fonts/serif-italic-webfont.ttf') format('truetype'),
+         url('../fonts/serif-italic-webfont.svg#serifitalic') format('svg');
+    font-weight: 400;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'serif';
+    src: url('../fonts/serif-bold-webfont.eot');
+    src: url('../fonts/serif-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/serif-bold-webfont.woff2') format('woff2'),
+         url('../fonts/serif-bold-webfont.woff') format('woff'),
+         url('../fonts/serif-bold-webfont.ttf') format('truetype'),
+         url('../fonts/serif-bold-webfont.svg#serifbold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'serif';
+    src: url('../fonts/serif-bolditalic-webfont.eot');
+    src: url('../fonts/serif-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/serif-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/serif-bolditalic-webfont.woff') format('woff'),
+         url('../fonts/serif-bolditalic-webfont.ttf') format('truetype'),
+         url('../fonts/serif-bolditalic-webfont.svg#serifbold_italic') format('svg');
+    font-weight: 800;
+    font-style: italic;
+}
+
+
+
+
 
 // Variables
 
 $black: rgba(0,0,0,0.87);
-$serif: "Calluna", serif;
-$sans: "CircularStd-Bold", "Circular", sans-serif;
+$lightgrey: rgba(0,0,0,0.24);
+$serif: 'serif', serif;
+$sans: 'sans', sans-serif;
+$base: 1em;
+
+
+
+
 
 * {
 	-webkit-font-smoothing: antialiased;
-}
-
-body {	
-	color: $black;
-	font-size: 16px;
-	line-height: 1.5;
-}
-
-section {
-  @include outer-container;
-  aside { @include span-columns(7);  @include shift(1); }
-  article { @include span-columns(4); }
+	text-rendering: optimizeLegibility;
 }
 
 img {
 	max-width: 100%;
 	height: auto;
-	margin-bottom: 2rem;
-}
-p {
-	font-family: $serif;
-
-	font-weight: 600;
-
-	&.lead {
-		font-size: 50px;
-		line-height: 1;
-		font-weight: 100;
-		clear: both;
-		margin-top: 2rem;
-	}	
 }
 
+body {	
+	color: $black;
+	font-size: 80%;
+	line-height: 1.5;
+	font-family: $sans;
+	font-weight: 400;
+	
+	@include media(48*$base) {
+		font-size: 100%;
+	}
+}
+
+section {
+	@include outer-container(100%);
+	overflow: auto;
+
+	&.main {
+		
+		background: url(../img/featured.png) no-repeat right top fixed;
+		background-size: cover;
+		background-attachment: scroll;
+		
+		@include pad($base);
+		
+		@include media(48*$base) {
+			@include pad(default);
+		}
+		
+		@include media(85*$base) {
+			background: url(../img/featured-2.png) no-repeat right top fixed;
+			background-size: cover;
+			background-attachment: scroll;
+		}
+
+		> div {
+			
+			@include pad($base);
+		
+			/*
+			@include media(48*$base) {
+				@include pad(default);
+			}
+			*/
+
+			border: .25*$base $black solid;
+			max-width: 25*$base;
+			
+			@include span-columns(12);
+			
+			@include media(30*$base) {
+				@include span-columns(10);
+			}
+			
+			@include media(48*$base) {
+				@include span-columns(5);
+			}
+			
+		}
+		
+		p.summary {
+			font-family: $serif;
+// 			font-family: "adobe-garamond-pro", sans-serif;
+			@include font-feature-settings("liga");
+			font-style: normal;
+			font-weight: 400;
+			font-size: 1.5*$base;
+			color: $black;
+			line-height: 1.2;
+			margin: .5*$base 0;
+		}
+	}
+
+}
 
 h1 {
 	font-family: $sans;
-	font-size: 1.75em;
-	font-weight: bold;
-	line-height: 1;
-	letter-spacing: 0.2857em;
-	padding-left: .875rem;
-	padding-right: 0.3375rem;
-	padding-bottom: .5rem;
-	padding-top: .5rem;
-	border: .25rem solid $black;
-	display: inline-block;
-	text-align: center;
-	box-sizing: border-box;
+	font-weight: 800;
+	font-size: 1.7*$base;
+	color: $black;
+	line-height: 1.285;
+	letter-spacing: .25*$base;
+	margin: 0.5*$base 0 1.5*$base;
 }
 
-
-.box {
-	border: .25rem solid $black;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	margin-top: 2rem;
-	float: left;
-	margin-bottom: 2rem;
-	
-	h1 {
+form {
+	input {
+		appearance: none;
 		border: none;
-		padding-left: 0;
-		padding-right: 0;
-	}
-	
-	.lead {
-		margin: 2rem 0;
-		margin-top: 1rem;
-	}
-	
-	.label {
-		font-family: "CircularStd-Book";
-		font-weight: normal;
-		letter-spacing: .5px;
-		font-size: 15px;
-		color: rgba(0,0,0,0.87);
-		line-height: 19px;
-		margin-top: 0;
-		padding-bottom: 0.5rem;
-	}
-}
-
-nav {
-	position: fixed;
-}
-
-.box.hover {
-		
-		padding: 0;
 		margin: 0;
-		width: 8.5rem;
-		height: 3.25rem;
-		background: white;
+		padding: 0;
+		border-bottom: 2px $lightgrey solid;
+		font-family: $sans;
+		font-weight: 800;
+		font-size: $base;
+		color: $lightgrey;
+		line-height: 1.25*$base;
+		letter-spacing: .125*$base;
+		background: none;
+		text-transform: uppercase;
+		padding-bottom: .375*$base;
+		border-radius: 0;
+		width: 12*$base;
 		
-		transition: all 0.2s ease;
-		
-
-		* {
-			transition: all 0.3s ease;
-		}
-
-		
-		h1 {
-			font-family: $sans;
-			font-size: 1.75em;
-			font-weight: bold;
-			line-height: 1;
-			letter-spacing: 0.2857em;
-			padding-left: .875rem;
-			padding-right: 0.3375rem;
-			padding-bottom: .5rem;
-			padding-top: .5rem;
-			display: inline-block;
-			text-align: center;
-			box-sizing: border-box;
-			margin: 0;
-			transition: all 0.3s ease;
-// 			transition-delay: .1s;
-		}
-		
-
-		.label {
-			color: transparent;
-			font-size: 1px;
-			line-height: 0;
-			height: 0px;
-			width: 15rem;
- 			transition-delay: .2s;
-			margin: 0;
-			padding: 0;
-			opacity: 0;
-		}
-		
-		&:hover {
-			
-			border: .25rem solid $black;
-			width: 16rem;
-			height: 11rem;
-			
-			h1 {
-				margin: 0.67em 0; 
-			}
-			
-			.label {
-				color: transparent;
-				height: auto;
-				width: auto;
-				display: inline-block;
-				padding-left: .875rem;
-				font-family: "CircularStd-Book";
-				font-weight: normal;
-				letter-spacing: .5px;
-				font-size: 15px;
-				color: rgba(0,0,0,0.87);
-				line-height: 19px;
-				margin-top: 0;
-				padding-bottom: 2rem;
-				opacity: 1;
-			}
+		&:focus {
+			outline: none;
+			border-bottom: 2px $black solid;
+			color: $black;
 		}
 	}
+	
+	button {
+		appearance: none;
+		background: none;
+		border: none;
+		padding: 0;
+		padding-top: .875*$base;
+		font-family: $sans;
+		font-weight: 800;
+		font-size: $base;
+		color: $black;
+		line-height: 20px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		
+		&::after {
+			font-family: $sans;
+			content: "\2192";
+			text-indent: -9999px;
+			color: transparent;
+			width: $base;
+			height: .875*$base;
+			background: url(../img/rarr.svg) center center no-repeat;
+			margin-left: .75*$base;
+		}
+	}
+}
 
 
+.floatlabel {
+	padding-top: 1.5*$base !important;
+}
+
+label.label-floatlabel {
+	color: $black !important;
+	font-family: $sans;
+	font-weight: 600;
+	letter-spacing: .125*$base;
+	text-transform: uppercase;
+	left: 0 !important;
+}
+
+footer.nav {
+
+	
+	position: relative;
+	margin: 0;
+	width: 100%;
+	overflow: auto;
+	
+	
+	figure {
+		position: relative;
+		float: left;
+		overflow: hidden;
+/*
+		min-width: 320px;
+		max-height: 360px;
+*/
+		width: 100%;
+		background: $black;
+		text-align: left;
+		cursor: pointer;
+		
+		@include media(30*$base) {
+			width: 50%;	
+		}
+		
+		img {
+			position: relative;
+			display: block;
+			min-height: 100%;
+			min-width: 100%;
+			height: auto;
+			opacity: 0.54;
+		}
+		
+		figcaption {
+			padding: 2*$base;
+			color: black;
+			text-transform: uppercase;
+			font-size: 1.25*$base;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			
+			&::before, &::after {
+				pointer-events: none;
+			}
+			
+			
+			&, > a {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			
+			> a {
+				z-index: 1000;
+				text-indent: 200%;
+				white-space: nowrap;
+				font-size: 0;
+				opacity: 0;	
+			}
+			
+		}
+
+
+		h2 {
+			font-family: $sans;
+			font-weight: 800;
+			font-size: 20px;
+			color: #FFFFFF;
+			line-height: 25px;
+			letter-spacing: 2px;
+		}
+		
+		p, h2 {
+			margin: 0;
+		}
+		
+		p {
+			letter-spacing: 1px;
+			font-size: 68.5%;
+		}
+		
+	}
+	
+	
+	
+}
+
+
+
+
+
+
+/*---------------*/
+/***** Duke *****/
+/*---------------*/
+
+figure.effect-duke {
+	background: black;
+	max-height: 15*$base;
+}
+
+figure.effect-duke img,
+figure.effect-duke p {
+	-webkit-transition: opacity 1s, -webkit-transform 0.75s;
+	transition: opacity 1s, transform 0.75s;
+}
+
+figure.effect-duke img.color {
+	opacity: 0;
+	-webkit-transition: opacity 1s, -webkit-transform 0.75s;
+	transition: opacity 1s, transform 0.75s;
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+figure.effect-duke:hover img.bw {
+	opacity: 0;
+	-webkit-transform: scale3d(1.03,1.03,1);
+	transform: scale3d(1.03,1.03,1);
+}
+
+figure.effect-duke:hover img.color {
+	opacity: 1;
+	-webkit-transform: scale3d(1.03,1.03,1) translateY(-97%);
+	transform: scale3d(1.03,1.03,1) translateY(-97%);
+}
+
+
+figure.effect-duke h2 {
+	transition: color 1s ease-out;
+	color: white;
+}
+
+figure.effect-duke p {
+	text-transform: none;
+	font-size: 90%;
+	opacity: 0;
+}
+
+figure.effect-duke:hover h2,
+figure.effect-duke:hover p {
+	opacity: 1;
+	color: black;
+}
+
+/* Media queries */
+@media screen and (max-width: 50*$base) {
+	.content {
+		padding: 0 10px;
+	}
+	.grid figure {
+		display: inline-block;
+		float: none;
+		margin: 10px auto;
+		width: 100%;
+	}
+}
