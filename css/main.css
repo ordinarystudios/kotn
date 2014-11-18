@@ -484,7 +484,10 @@ h1 {
   color: rgba(0, 0, 0, 0.87);
   line-height: 1.285;
   letter-spacing: 0.25em;
-  margin: 0.7em 0 1.7em; }
+  margin: 0.5em 0 1.3em; }
+  @media screen and (min-width: 30em) {
+    h1 {
+      margin: 0.7em 0 1.7em; } }
 
 form {
   margin-bottom: 1em; }
@@ -530,6 +533,7 @@ form {
       width: 1em;
       height: 0.875em;
       background: url(../img/rarr.svg) center center no-repeat;
+      background-size: 100%;
       margin-left: 0.75em; }
 
 .floatlabel {
