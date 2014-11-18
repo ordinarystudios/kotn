@@ -121,9 +121,18 @@ body {
 	line-height: 1.5;
 	font-family: $sans;
 	font-weight: 400;
+	transition: all 0.3s ease;
+	
+	@include media(36*$base) {
+		font-size: 90%;
+	}
 	
 	@include media(48*$base) {
 		font-size: 100%;
+	}
+	
+	@include media(80*$base) {
+		font-size: 110%;
 	}
 }
 
@@ -339,7 +348,7 @@ footer.nav {
 		h2 {
 			font-family: $sans;
 			font-weight: 800;
-			font-size: 20px;
+			font-size: 1.25*$base;
 			color: #FFFFFF;
 			line-height: 25px;
 			letter-spacing: 2px;
@@ -402,7 +411,7 @@ figure.effect-duke:hover img.color {
 
 
 figure.effect-duke h2 {
-	transition: all 1s ease-out;
+	transition: all 1s ease;
 	color: white;
 }
 
@@ -416,7 +425,7 @@ figure.effect-duke:hover h2,
 figure.effect-duke:hover p {
 	opacity: 1;
 	color: black;
-	text-shadow: 0 0 16px $white; 
+	text-shadow: 0 0 16px rgba(255,255,255,0.54); 
 }
 
 /* Media queries */

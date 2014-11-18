@@ -399,10 +399,17 @@ body {
   font-size: 80%;
   line-height: 1.5;
   font-family: "sans", sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  transition: all 0.3s ease; }
+  @media screen and (min-width: 36em) {
+    body {
+      font-size: 90%; } }
   @media screen and (min-width: 48em) {
     body {
       font-size: 100%; } }
+  @media screen and (min-width: 80em) {
+    body {
+      font-size: 110%; } }
 
 section {
   max-width: 100%;
@@ -587,7 +594,7 @@ footer.nav {
     footer.nav figure h2 {
       font-family: "sans", sans-serif;
       font-weight: 800;
-      font-size: 20px;
+      font-size: 1.25em;
       color: #FFFFFF;
       line-height: 25px;
       letter-spacing: 2px; }
@@ -627,7 +634,7 @@ figure.effect-duke:hover img.color {
   transform: scale3d(1.03, 1.03, 1) translateY(-97%); }
 
 figure.effect-duke h2 {
-  transition: all 1s ease-out;
+  transition: all 1s ease;
   color: white; }
 
 figure.effect-duke p {
@@ -639,7 +646,7 @@ figure.effect-duke:hover h2,
 figure.effect-duke:hover p {
   opacity: 1;
   color: black;
-  text-shadow: 0 0 16px rgba(255, 255, 255, 0.87); }
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.54); }
 
 /* Media queries */
 @media screen and (max-width: 50em) {
