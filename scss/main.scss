@@ -177,7 +177,7 @@ section {
 				@include span-columns(10);
 			}
 			
-			@include media(48*$base) {
+			@include media(50*$base) {
 				@include span-columns(5);
 			}
 			
@@ -226,16 +226,16 @@ form {
 		padding: 0;
 		border-bottom: 2px $lightgrey solid;
 		font-family: $sans;
-		font-weight: 800;
+		font-weight: 600;
 		font-size: $base;
 		color: $lightgrey;
 		line-height: 1.25*$base;
-		letter-spacing: .125*$base;
+		letter-spacing: .0625*$base;
 		background: none;
 		text-transform: uppercase;
 		padding-bottom: .375*$base;
 		border-radius: 0;
-		width: 12*$base;
+		width: 11*$base;
 		
 		&:focus {
 			outline: none;
@@ -255,7 +255,7 @@ form {
 		font-size: $base;
 		color: $black;
 		line-height: 20px;
-		letter-spacing: 2px;
+		letter-spacing: .0625*$base;
 		text-transform: uppercase;
 		
 		&::after {
@@ -355,7 +355,7 @@ footer.nav {
 
 		h2 {
 			font-family: $sans;
-			font-weight: 800;
+			font-weight: 600;
 			font-size: 1.25*$base;
 			color: #FFFFFF;
 			line-height: .875*$base;

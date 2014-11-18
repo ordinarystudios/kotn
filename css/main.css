@@ -456,7 +456,7 @@ section {
           width: 82.9403914003%; }
           section.main > div:last-child {
             margin-right: 0; } }
-      @media screen and (min-width: 48em) {
+      @media screen and (min-width: 50em) {
         section.main > div {
           float: left;
           display: block;
@@ -498,16 +498,16 @@ form {
     padding: 0;
     border-bottom: 2px rgba(0, 0, 0, 0.24) solid;
     font-family: "sans", sans-serif;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 1em;
     color: rgba(0, 0, 0, 0.24);
     line-height: 1.25em;
-    letter-spacing: 0.125em;
+    letter-spacing: 0.0625em;
     background: none;
     text-transform: uppercase;
     padding-bottom: 0.375em;
     border-radius: 0;
-    width: 12em; }
+    width: 11em; }
     form input:focus {
       outline: none;
       border-bottom: 2px rgba(0, 0, 0, 0.87) solid;
@@ -523,7 +523,7 @@ form {
     font-size: 1em;
     color: rgba(0, 0, 0, 0.87);
     line-height: 20px;
-    letter-spacing: 2px;
+    letter-spacing: 0.0625em;
     text-transform: uppercase; }
     form button::after {
       font-family: "sans", sans-serif;
@@ -597,7 +597,7 @@ footer.nav {
         opacity: 0; }
     footer.nav figure h2 {
       font-family: "sans", sans-serif;
-      font-weight: 800;
+      font-weight: 600;
       font-size: 1.25em;
       color: #FFFFFF;
       line-height: 0.875em;
