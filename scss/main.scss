@@ -358,8 +358,13 @@ footer.nav {
 			font-weight: 800;
 			font-size: 1.25*$base;
 			color: #FFFFFF;
-			line-height: 25px;
-			letter-spacing: 2px;
+			line-height: .875*$base;
+			letter-spacing: .125*$base;
+			
+			@include media(26*$base) {
+				line-height: 1.5*$base;
+			}
+			
 		}
 		
 		p, h2 {
@@ -389,6 +394,11 @@ footer.nav {
 figure.effect-duke {
 	background: black;
 	max-height: 15*$base;
+	min-height: 5*$base;
+	
+	@include media(30*$base) {
+			min-height: 6.75*$base;
+		}
 }
 
 figure.effect-duke img,
