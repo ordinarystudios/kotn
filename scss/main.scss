@@ -96,6 +96,7 @@
 
 $black: rgba(0,0,0,0.87);
 $lightgrey: rgba(0,0,0,0.24);
+$white: rgba(255,255,255,0.87);
 $serif: 'serif', serif;
 $sans: 'sans', sans-serif;
 $base: 1em;
@@ -401,7 +402,7 @@ figure.effect-duke:hover img.color {
 
 
 figure.effect-duke h2 {
-	transition: color 1s ease-out;
+	transition: all 1s ease-out;
 	color: white;
 }
 
@@ -415,6 +416,7 @@ figure.effect-duke:hover h2,
 figure.effect-duke:hover p {
 	opacity: 1;
 	color: black;
+	text-shadow: 0 0 16px $white; 
 }
 
 /* Media queries */

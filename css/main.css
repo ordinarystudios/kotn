@@ -627,7 +627,7 @@ figure.effect-duke:hover img.color {
   transform: scale3d(1.03, 1.03, 1) translateY(-97%); }
 
 figure.effect-duke h2 {
-  transition: color 1s ease-out;
+  transition: all 1s ease-out;
   color: white; }
 
 figure.effect-duke p {
@@ -638,7 +638,8 @@ figure.effect-duke p {
 figure.effect-duke:hover h2,
 figure.effect-duke:hover p {
   opacity: 1;
-  color: black; }
+  color: black;
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.87); }
 
 /* Media queries */
 @media screen and (max-width: 50em) {
