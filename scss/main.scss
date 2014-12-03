@@ -194,7 +194,7 @@ section {
 			@include font-feature-settings("liga");
 			font-style: normal;
 			font-weight: 400;
-			font-size: 1.1*$base;
+			font-size: 1.2*$base;
 			line-height: 1.22;
 			color: $black;
 			line-height: 1.2;
@@ -207,7 +207,7 @@ section {
 h1 {
 	font-family: $sans;
 	font-weight: 800;
-	font-size: 1.25*$base;
+	font-size: 1.5*$base;
 	color: $black;
 	line-height: 1.285;
 	letter-spacing: .25*$base;
@@ -368,7 +368,7 @@ footer.nav {
 		h2 {
 			font-family: $sans;
 			font-weight: 600;
-			font-size: 1.25*$base;
+			font-size: 1*$base;
 			color: #FFFFFF;
 			line-height: .875*$base;
 			letter-spacing: .125*$base;
