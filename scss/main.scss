@@ -95,6 +95,7 @@
 // Variables
 
 $black: rgba(0,0,0,0.87);
+$darkgrey: rgba(0,0,0,0.54);
 $lightgrey: rgba(0,0,0,0.24);
 $white: rgba(255,255,255,0.87);
 $serif: 'serif', serif;
@@ -127,12 +128,16 @@ body {
 		font-size: 90%;
 	}
 	
-	@include media(48*$base) {
+	@include media(80*$base) {
 		font-size: 100%;
 	}
 	
-	@include media(80*$base) {
+	@include media(100*$base) {
 		font-size: 110%;
+	}
+	
+	@include media(120*$base) {
+		font-size: 125%;
 	}
 }
 
@@ -189,7 +194,8 @@ section {
 			@include font-feature-settings("liga");
 			font-style: normal;
 			font-weight: 400;
-			font-size: 1.5*$base;
+			font-size: 1.1*$base;
+			line-height: 1.22;
 			color: $black;
 			line-height: 1.2;
 			margin: .5*$base 0;
@@ -201,7 +207,7 @@ section {
 h1 {
 	font-family: $sans;
 	font-weight: 800;
-	font-size: 1.7*$base;
+	font-size: 1.25*$base;
 	color: $black;
 	line-height: 1.285;
 	letter-spacing: .25*$base;
@@ -257,6 +263,12 @@ form {
 		line-height: 20px;
 		letter-spacing: .0625*$base;
 		text-transform: uppercase;
+		
+		&:focus {
+			outline: none;
+			border: none;
+			color: $darkgrey;
+		}
 		
 		&::after {
 			font-family: $sans;
