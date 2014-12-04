@@ -19,17 +19,20 @@
 	    
 	    <div>
 	        <h1>KOTN</h1>
-	
-<!-- 	        <p class="summary">We exist to elevate the every day.<br> The moments that no one ever thought to photograph. The ones we would give anything to re-live. It's not the stressful meetings or the swanky parties, but what ends up most important is just the gift of a perfectly&nbsp;ordinary&nbsp;day.</p> -->
 	        
 	           <p class="summary">A hot bath on a cold winter night. Walks to the creek. Getting into crisp clean sheets. The city after the rain. A cup of coffee on the dock. Finding the perfect t-shirt. Most of the time the ordinary moments, the ones we never thought to photograph, are the ones we'd give anything to relive.</p>
    <p class="summary">We believe in the perfectly ordinary. Valuing the beauty in everyday things. That's what inspired us to create the ultimate essentials, using the finest&nbsp;quality&nbsp;Egyptian&nbsp;cotton.</p>
 	
 	        <p class="summary">Find joy in the ordinary.</p> <!-- Find joy in the ordinary. -->
 	
-	        <form action="#">
-	            <input type="email" placeholder="Your email" class="floatlabel">
-	            <button type="submit">Request Invite</button>
+	        <form id="newsletter-signup" action="signup.php?action=signup" method="post">
+		        <fieldset>
+					<input type="text" name="signup-email" id="signup-email"  placeholder="Your email" class="floatlabel" />
+					<button type="submit" id="signup-button">Request Invite</button>
+					<p id="signup-response"></p>
+					
+
+		        </fieldset>
 	        </form>
 	    </div>
 
@@ -68,6 +71,76 @@
          $('input.floatlabel').floatlabel({
 	         "transitionDuration": .5
          });
+    </script>
+    
+    <script>
+	    $(document).ready(function(){
+			$('#newsletter-signup').submit(function(){
+				
+				//check the form is not currently submitting
+				if($(this).data('formstatus') !== 'submitting'){
+				
+					//setup variables
+					var form = $(this),
+						formData = form.serialize(),
+						formUrl = form.attr('action'),
+						formMethod = form.attr('method'), 
+						responseMsg = $('#signup-response'),
+						signupButton = $('#signup-button');
+					
+					//add status data to form
+					form.data('formstatus','submitting');
+					
+					//show response message - waiting
+					responseMsg.hide()
+							   .addClass('response-waiting')
+							   .text('Please wait…')
+							   .fadeIn(200);
+					
+					//send data to server for validation
+					$.ajax({
+						url: formUrl,
+						type: formMethod,
+						data: formData,
+						success:function(data){
+							
+							//setup variables
+							var responseData = jQuery.parseJSON(data), 
+								klass = '';
+							
+							//response conditional
+							switch(responseData.status){
+								case 'error':
+									klass = 'response-error';
+								break;
+								case 'success':
+									klass = 'response-success';
+								break;	
+							}
+							
+							//show reponse message
+							responseMsg.fadeOut(200,function(){
+								$(this).removeClass('response-waiting')
+									   .addClass(klass)
+									   .text(responseData.message)
+									   .fadeIn(200,function(){
+										   //set timeout to hide response message
+										   setTimeout(function(){
+											   responseMsg.fadeOut(200,function(){
+											       $(this).removeClass(klass);
+												   form.data('formstatus','idle');
+											   });
+										   },3000)
+										});
+							});
+						}
+					});
+				}
+				
+				//prevent form from submitting
+				return false;
+			});
+		});
     </script>
 </body>
 </html>

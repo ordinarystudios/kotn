@@ -223,7 +223,8 @@ h1 {
 
 form {
 	
-	margin-bottom: $base;
+	margin-top: 1.5*$base;
+// 	margin-bottom: $base;
 	
 	input {
 		appearance: none;
@@ -250,7 +251,7 @@ form {
 		}
 	}
 	
-	button {
+	button, input.button {
 		appearance: none;
 		background: none;
 		border: none;
@@ -263,6 +264,7 @@ form {
 		line-height: 20px;
 		letter-spacing: .0625*$base;
 		text-transform: uppercase;
+		text-align: left;
 		
 		&:focus {
 			outline: none;
