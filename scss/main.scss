@@ -89,7 +89,12 @@
 }
 
 
-
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 
 // Variables
@@ -144,12 +149,26 @@ body {
 section {
 	@include outer-container(100%);
 	overflow: auto;
-
-	&.main {
-		
+	
+	&.main.home {
 		background: url(../img/featured.png) no-repeat right top fixed;
 		background-size: cover;
 		background-attachment: scroll;
+		
+		@include media(85*$base) {
+			background: url(../img/featured-2.png) no-repeat right top fixed;
+			background-size: cover;
+			background-attachment: scroll;
+		}
+		
+		> div {
+			border: .25*$base $black solid;
+			margin: -.25*$base;
+			max-width: 25*$base;
+		}
+	}
+
+	&.main {
 		
 		@include pad($base);
 		
@@ -157,11 +176,6 @@ section {
 			@include pad(default);
 		}
 		
-		@include media(85*$base) {
-			background: url(../img/featured-2.png) no-repeat right top fixed;
-			background-size: cover;
-			background-attachment: scroll;
-		}
 
 		> div {
 			
@@ -172,9 +186,6 @@ section {
 				@include pad(default);
 			}
 			*/
-
-			border: .25*$base $black solid;
-			max-width: 25*$base;
 			
 			@include span-columns(12);
 			
