@@ -191,6 +191,12 @@ section.main p.summary { font-family: "serif", serif; -webkit-font-feature-setti
 section.main.home { background: url(../img/featured.jpg) no-repeat right top fixed; background-size: cover; background-attachment: scroll; }
 @media screen and (min-width: 85em) { section.main.home { background: url(../img/featured-2.jpg) no-repeat right top fixed; background-size: cover; background-attachment: scroll; } }
 section.main.home > div { padding: 1em 3em 1em 1em; border: 0.25em rgba(0, 0, 0, 0.87) solid; margin: -0.25em; max-width: 30em; }
+@media screen and (min-width: 30em) { section.main.home > div { float: left; display: block; margin-right: 2.3576515979%; width: 82.9403914003%; float: none; }
+  section.main.home > div:last-child { margin-right: 0; } }
+@media screen and (min-width: 35em) { section.main.home > div { float: left; display: block; margin-right: 2.3576515979%; width: 65.8807828007%; float: none; }
+  section.main.home > div:last-child { margin-right: 0; } }
+@media screen and (min-width: 60em) { section.main.home > div { float: left; display: block; margin-right: 2.3576515979%; width: 40.2913699012%; float: none; }
+  section.main.home > div:last-child { margin-right: 0; } }
 
 h1 { font-family: "sans", sans-serif; font-weight: 800; font-size: 1.5em; color: rgba(0, 0, 0, 0.87); line-height: 1.285; letter-spacing: 0.25em; /* 	margin: 0.5em 0 1.3em; */ /* 	@include media(30*$base) {
 		margin: 0.7*$base 0 1.7*$base;

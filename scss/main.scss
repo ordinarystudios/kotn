@@ -106,6 +106,7 @@ $white: rgba(255,255,255,0.87);
 $serif: 'serif', serif;
 $sans: 'sans', sans-serif;
 $base: 1em;
+$baseline: 1.5*$base;
 
 
 
@@ -189,12 +190,12 @@ header {
 			padding-bottom: none;
 
 
-// CONVERT FOLLOWING TO EMS
-
-border: 3px solid black;
-padding: 5px 7px 5px 10px;
-margin-left: -13px;
-margin-top: 6px;
+			// CONVERT FOLLOWING TO EMS
+			
+			border: 3px solid black;
+			padding: 5px 7px 5px 10px;
+			margin-left: -13px;
+			margin-top: 6px;
 
 
 
@@ -340,6 +341,22 @@ section {
 			border: .25*$base $black solid;
 			margin: -.25*$base;
 			max-width: 30*$base;
+			
+			@include media(30*$base) {
+				@include span-columns(10);
+				float: none;
+			}
+	
+			@include media(35*$base) {
+				@include span-columns(8);
+				float: none;
+			}
+	
+			
+			@include media(60*$base) {
+				@include span-columns(5);
+				float: none;
+			}
 		}
 	}
 
