@@ -188,8 +188,8 @@ section.main > div p { float: left; display: block; margin-right: 2.3576515979%;
 */ }
 section.main > div p:last-child { margin-right: 0; }
 section.main p.summary { font-family: "serif", serif; -webkit-font-feature-settings: "liga"; -moz-font-feature-settings: "liga"; -ms-font-feature-settings: "liga"; font-feature-settings: "liga"; font-style: normal; font-weight: 400; font-size: 1.2em; line-height: 1.4; color: rgba(0, 0, 0, 0.87); line-height: 1.2; margin: 0.5em 0; }
-section.main.home { background: url(../img/featured.png) no-repeat right top fixed; background-size: cover; background-attachment: scroll; }
-@media screen and (min-width: 85em) { section.main.home { background: url(../img/featured-2.png) no-repeat right top fixed; background-size: cover; background-attachment: scroll; } }
+section.main.home { background: url(../img/featured.jpg) no-repeat right top fixed; background-size: cover; background-attachment: scroll; }
+@media screen and (min-width: 85em) { section.main.home { background: url(../img/featured-2.jpg) no-repeat right top fixed; background-size: cover; background-attachment: scroll; } }
 section.main.home > div { padding: 1em 3em 1em 1em; border: 0.25em rgba(0, 0, 0, 0.87) solid; margin: -0.25em; max-width: 30em; }
 
 h1 { font-family: "sans", sans-serif; font-weight: 800; font-size: 1.5em; color: rgba(0, 0, 0, 0.87); line-height: 1.285; letter-spacing: 0.25em; /* 	margin: 0.5em 0 1.3em; */ /* 	@include media(30*$base) {

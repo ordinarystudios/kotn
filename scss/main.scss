@@ -325,12 +325,12 @@ section {
 
 		
 	&.main.home {
-		background: url(../img/featured.png) no-repeat right top fixed;
+		background: url(../img/featured.jpg) no-repeat right top fixed;
 		background-size: cover;
 		background-attachment: scroll;
 		
 		@include media(85*$base) {
-			background: url(../img/featured-2.png) no-repeat right top fixed;
+			background: url(../img/featured-2.jpg) no-repeat right top fixed;
 			background-size: cover;
 			background-attachment: scroll;
 		}
