@@ -132,7 +132,10 @@ h3 {
 	font-family: $serif;
 	line-height: 1;
 	display: inline-block;
-	border-bottom: solid 1px black;
+	
+	span {
+		border-bottom: solid 1px black;
+	}
 }
 
 
@@ -258,37 +261,67 @@ section {
 		
 
 		> div {
-			
-			@include pad($base 3*$base $base $base);
+
+			h2, h3, .copy {
+				@include pad(0 1rem);
+			}
 		
-			/*
-			@include media(48*$base) {
-				@include pad(default);
-			}
-			*/
-			
-			@include span-columns(12);
-
-			transform: all 0.3s ease;
-			
-			@include media(30*$base) {
-				@include span-columns(10);
-			}
-
-			@include media(35*$base) {
-				@include span-columns(8);
-			}
-
-			@include media(45*$base) {
-				@include span-columns(6);
+			div.copy {
+				margin-bottom: 4*$base;
+	
+				@include media(35*$base) {
+					column-count: 2;
+					column-gap: 2*$base;
+				}
+	
+				
+				@include media(65*$base) {
+					column-count: 1;
+					@include span-columns(4);
+					float: none;
+				}
+				
 			}
 			
-			@include media(60*$base) {
-				@include span-columns(5);
+			img {
+				@include media(65*$base) {
+					@include span-columns(8);
+					@include omega();
+					float: right;
+				}
+			}
+		
+			p {
+				
+				@include span-columns(12);
+				
+				display: block;
+				float: none;
+	
+				transform: all 0.3s ease;
+				
+/*
+				@include media(30*$base) {
+					@include span-columns(10);
+					float: none;
+				}
+	
+				@include media(35*$base) {
+					@include span-columns(8);
+					float: none;
+				}
+	
+				
+				@include media(60*$base) {
+					@include span-columns(5);
+					float: none;
+				}
+*/
+
 			}
 			
 		}
-		
+
 		p.summary {
 			font-family: $serif;
 // 			font-family: "adobe-garamond-pro", sans-serif;
