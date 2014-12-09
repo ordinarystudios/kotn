@@ -15,7 +15,7 @@ if($_GET['action'] == 'signup'){
 	}
 	else if(!preg_match('/^[^\W][a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\@[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\.[a-zA-Z]{2,4}$/', $email)){ //validate email address - check if is a valid email address
 			$status = "error";
-			$message = "Is there a typo?";
+			$message = "Is there a typo? Try again.";
 	}
 	else {
 		$existingSignup = mysql_query("SELECT * FROM signups WHERE signup_email_address='$email'");   
