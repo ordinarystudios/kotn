@@ -13,7 +13,7 @@ if($_GET['action'] == 'signup'){
 		$status = "error";
 		$message = "You did not enter an email address!";
 	}
-	else if(!preg_match('/^[^\W][a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\@[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\.[a-zA-Z]{2,4}$/', $email)){ //validate email address - check if is a valid email address
+	else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){ //validate email address - check if is a valid email address -- OLD: if(!preg_match('/^[^\W][a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\@[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\.[a-zA-Z]{2,4}$/', $email))
 			$status = "error";
 			$message = "Is there a typo? Try again.";
 	}

@@ -111,6 +111,7 @@ $base: 1em;
 
 
 
+
 * {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
@@ -120,6 +121,20 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+
+
+h2 {
+	font-size: 1.2*$base;
+}
+
+h3 {
+	font-size: 1.2*$base;
+	font-family: $serif;
+	line-height: 1;
+	display: inline-block;
+	border-bottom: solid 1px black;
+}
+
 
 body {	
 	color: $black;

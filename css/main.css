@@ -136,6 +136,10 @@ html { -moz-box-sizing: border-box; box-sizing: border-box; }
 
 img { max-width: 100%; height: auto; }
 
+h2 { font-size: 1.2em; }
+
+h3 { font-size: 1.2em; font-family: "serif", serif; line-height: 1; display: inline-block; border-bottom: solid 1px black; }
+
 body { color: rgba(0, 0, 0, 0.87); font-size: 80%; line-height: 1.5; font-family: "sans", sans-serif; font-weight: 400; -webkit-transition: all 0.3s ease; transition: all 0.3s ease; }
 @media screen and (min-width: 36em) { body { font-size: 90%; } }
 @media screen and (min-width: 85em) { body { font-size: 100%; } }
