@@ -162,7 +162,7 @@ section:after { content: ""; display: table; clear: both; }
 section.main { padding: 1em; }
 @media screen and (min-width: 48em) { section.main { padding: 2.3576515979%; } }
 section.main > div h2, section.main > div h3, section.main > div .copy { padding: 0 1rem; }
-section.main > div div.copy { margin-top: 2em; margin-bottom: 6em; }
+section.main > div div.copy { margin-top: 2em; margin-bottom: 4em; }
 @media screen and (min-width: 65em) { section.main > div div.copy { margin-top: 0; } }
 @media screen and (min-width: 35em) { section.main > div div.copy { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; -webkit-column-gap: 2em; -moz-column-gap: 2em; column-gap: 2em; } }
 @media screen and (min-width: 65em) { section.main > div div.copy { -webkit-column-count: 1; -moz-column-count: 1; column-count: 1; float: left; display: block; margin-right: 2.3576515979%; width: 31.7615656014%; float: none; }
