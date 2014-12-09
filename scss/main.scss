@@ -133,7 +133,7 @@ body {
 		font-size: 90%;
 	}
 	
-	@include media(80*$base) {
+	@include media(85*$base) {
 		font-size: 100%;
 	}
 	
@@ -229,7 +229,7 @@ section {
 		> div {
 			border: .25*$base $black solid;
 			margin: -.25*$base;
-			max-width: 25*$base;
+			max-width: 30*$base;
 		}
 	}
 
@@ -244,7 +244,7 @@ section {
 
 		> div {
 			
-			@include pad($base);
+			@include pad($base 3*$base $base $base);
 		
 			/*
 			@include media(48*$base) {
@@ -253,12 +253,22 @@ section {
 			*/
 			
 			@include span-columns(12);
+
+			transform: all 0.3s ease;
 			
 			@include media(30*$base) {
 				@include span-columns(10);
 			}
+
+			@include media(35*$base) {
+				@include span-columns(8);
+			}
+
+			@include media(45*$base) {
+				@include span-columns(6);
+			}
 			
-			@include media(50*$base) {
+			@include media(60*$base) {
 				@include span-columns(5);
 			}
 			
@@ -271,7 +281,7 @@ section {
 			font-style: normal;
 			font-weight: 400;
 			font-size: 1.2*$base;
-			line-height: 1.22;
+			line-height: 1.4;
 			color: $black;
 			line-height: 1.2;
 			margin: .5*$base 0;
@@ -370,6 +380,22 @@ form {
 			margin-left: .75*$base;
 		}
 	}
+
+	#signup-response {
+		display: none;
+		padding: 0;
+		padding-top: .875*$base;
+		font-family: $sans;
+		font-weight: 800;
+		font-size: $base;
+		color: $black;
+		line-height: 20px;
+		letter-spacing: .0625*$base;
+		text-transform: uppercase;
+		text-align: left;
+		margin: 0;
+	}
+
 }
 
 

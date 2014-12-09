@@ -20,7 +20,7 @@
 	    <div>
 	        <h1>KOTN</h1>
 	        
-	           <p class="summary">A hot bath on a cold winter night. Walks to the creek. Getting into crisp clean sheets. The city after the rain. A cup of coffee on the dock. Finding the perfect t-shirt. Most of the time the ordinary moments, the ones we never thought to photograph, are the ones we'd give anything to relive.</p>
+	           <p class="summary">A hot bath on a cold winter night. Walks to the creek. Getting into crisp clean sheets. The city after the rain. A cup of coffee on the dock. Finding the perfect t-shirt. Most of the time the ordinary moments, the ones we never thought to photograph, are the ones we'd give&nbsp;anything&nbsp;to&nbsp;relive.</p>
    <p class="summary">We believe in the perfectly ordinary. Valuing the beauty in everyday things. That's what inspired us to create the ultimate essentials, using the finest&nbsp;quality&nbsp;Egyptian&nbsp;cotton.</p>
 	
 	        <p class="summary">Find joy in the ordinary.</p> <!-- Find joy in the ordinary. -->
@@ -94,6 +94,8 @@
 					//add status data to form
 					form.data('formstatus','submitting');
 					
+					signupButton.hide();
+					
 					//show response message - waiting
 					responseMsg.hide()
 							   .addClass('response-waiting')
@@ -132,13 +134,17 @@
 											   responseMsg.fadeOut(200,function(){
 											       $(this).removeClass(klass);
 												   form.data('formstatus','idle');
+												   signupButton.fadeIn(200);
 											   });
+											   
 										   },3000)
 										});
 							});
 						}
 					});
 				}
+				
+
 				
 				//prevent form from submitting
 				return false;
