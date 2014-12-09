@@ -245,6 +245,7 @@ section {
 		}
 		
 		> div {
+			@include pad($base 3*$base $base $base);
 			border: .25*$base $black solid;
 			margin: -.25*$base;
 			max-width: 30*$base;
