@@ -232,25 +232,6 @@ margin-top: 6px;
 section {
 	@include outer-container(100%);
 	overflow: auto;
-	
-	&.main.home {
-		background: url(../img/featured.png) no-repeat right top fixed;
-		background-size: cover;
-		background-attachment: scroll;
-		
-		@include media(85*$base) {
-			background: url(../img/featured-2.png) no-repeat right top fixed;
-			background-size: cover;
-			background-attachment: scroll;
-		}
-		
-		> div {
-			@include pad($base 3*$base $base $base);
-			border: .25*$base $black solid;
-			margin: -.25*$base;
-			max-width: 30*$base;
-		}
-	}
 
 	&.main {
 		
@@ -268,7 +249,12 @@ section {
 			}
 		
 			div.copy {
-				margin-bottom: 4*$base;
+				margin-top: 2*$base;
+				margin-bottom: 6*$base;
+				
+				@include media(65*$base) {
+					margin-top: 0;
+				}
 	
 				@include media(35*$base) {
 					column-count: 2;
@@ -337,6 +323,27 @@ section {
 		}
 	}
 
+		
+	&.main.home {
+		background: url(../img/featured.png) no-repeat right top fixed;
+		background-size: cover;
+		background-attachment: scroll;
+		
+		@include media(85*$base) {
+			background: url(../img/featured-2.png) no-repeat right top fixed;
+			background-size: cover;
+			background-attachment: scroll;
+		}
+		
+		> div {
+			@include pad($base 3*$base $base $base);
+			border: .25*$base $black solid;
+			margin: -.25*$base;
+			max-width: 30*$base;
+		}
+	}
+
+
 }
 
 h1 {
@@ -362,6 +369,15 @@ h1 {
 	
  		@include media(30*$base) {
 			margin: 0.7*$base 0 1.7*$base;
+		}
+	}
+}
+
+.philosophy {
+	
+	@include media(65*$base) {
+		img {
+			transform: translateY(-4*$base);
 		}
 	}
 }
