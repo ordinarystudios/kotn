@@ -7,12 +7,12 @@ $(document).ready(function() {
 	
 	
 	if ($(window).width() <= 480){	
-			$('section.main').css( 'min-height', function(frontheight) {
+			$('#hero').css( 'min-height', function(frontheight) {
 			frontheight = $(window).innerHeight() - ( 2 * $('figure.effect-duke').outerHeight());
 			return frontheight;
 		});
 		} else {
-		$('section.main').css( 'min-height', function(frontheight) {
+		$('#hero').css( 'min-height', function(frontheight) {
 		frontheight = $(window).innerHeight() - $('figure.effect-duke').outerHeight();
 		return frontheight;
 		});
@@ -27,12 +27,12 @@ $(document).ready(function() {
 		});
 		
 		if ($(window).width() <= 480){	
-			$('section.main').css( 'min-height', function(frontheight) {
+			$('#hero').css( 'min-height', function(frontheight) {
 			frontheight = $(window).innerHeight() - ( 2 * $('figure.effect-duke').outerHeight());
 			return frontheight;
 			});
 		} else {
-			$('section.main').css( 'min-height', function(frontheight) {
+			$('#hero').css( 'min-height', function(frontheight) {
 			frontheight = $(window).innerHeight() - $('figure.effect-duke').outerHeight();
 			return frontheight;
 			});

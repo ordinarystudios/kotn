@@ -146,6 +146,61 @@ body {
 	}
 }
 
+header {
+	
+	@include outer-container(100%);
+	overflow: auto;
+
+	@include pad($base);
+	padding-bottom: 0;
+		
+	@include media(48*$base) {
+		@include pad(default);
+		padding-bottom: 0;
+	}
+	
+	nav {
+
+		@include pad($base);
+		padding-bottom: 0;
+		overflow: auto;
+
+		h1 {
+			float: left;
+			display: inline-block;
+			padding-bottom: none;
+
+			a {
+				color: $black;
+				text-decoration: none;
+			}
+		}
+		
+		ul {
+
+			padding: 0;
+			float: right;
+			list-style: none;
+			
+			li {
+				
+				float: left;
+				margin-left: 2*$base;
+
+				text-transform: uppercase;
+				letter-spacing: 1px;
+
+				font-weight: 600;
+
+				a {
+					text-decoration: none;
+					color: $black;
+				}
+			}
+		}
+	}
+}
+
 section {
 	@include outer-container(100%);
 	overflow: auto;
@@ -223,13 +278,23 @@ h1 {
 	line-height: 1.285;
 	letter-spacing: .25*$base;
 	
-	margin: 0.5em 0 1.3em;
+/* 	margin: 0.5em 0 1.3em; */
 	
-	@include media(30*$base) {
+/* 	@include media(30*$base) {
 		margin: 0.7*$base 0 1.7*$base;
-	}
+	} */
 		
 	
+}
+
+.home {
+	h1 {
+		margin: 0.5em 0 1.3em; 
+	
+ 		@include media(30*$base) {
+			margin: 0.7*$base 0 1.7*$base;
+		}
+	}
 }
 
 form {

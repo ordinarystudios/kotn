@@ -142,6 +142,16 @@ body { color: rgba(0, 0, 0, 0.87); font-size: 80%; line-height: 1.5; font-family
 @media screen and (min-width: 100em) { body { font-size: 110%; } }
 @media screen and (min-width: 120em) { body { font-size: 125%; } }
 
+header { max-width: 100%; margin-left: auto; margin-right: auto; overflow: auto; padding: 1em; padding-bottom: 0; }
+header:after { content: ""; display: table; clear: both; }
+@media screen and (min-width: 48em) { header { padding: 2.3576515979%; padding-bottom: 0; } }
+header nav { padding: 1em; padding-bottom: 0; overflow: auto; }
+header nav h1 { float: left; display: inline-block; padding-bottom: none; }
+header nav h1 a { color: rgba(0, 0, 0, 0.87); text-decoration: none; }
+header nav ul { padding: 0; float: right; list-style: none; }
+header nav ul li { float: left; margin-left: 2em; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+header nav ul li a { text-decoration: none; color: rgba(0, 0, 0, 0.87); }
+
 section { max-width: 100%; margin-left: auto; margin-right: auto; overflow: auto; }
 section:after { content: ""; display: table; clear: both; }
 section.main.home { background: url(../img/featured.png) no-repeat right top fixed; background-size: cover; background-attachment: scroll; }
@@ -161,8 +171,12 @@ section.main > div:last-child { margin-right: 0; }
   section.main > div:last-child { margin-right: 0; } }
 section.main p.summary { font-family: "serif", serif; -webkit-font-feature-settings: "liga"; -moz-font-feature-settings: "liga"; -ms-font-feature-settings: "liga"; font-feature-settings: "liga"; font-style: normal; font-weight: 400; font-size: 1.2em; line-height: 1.22; color: rgba(0, 0, 0, 0.87); line-height: 1.2; margin: 0.5em 0; }
 
-h1 { font-family: "sans", sans-serif; font-weight: 800; font-size: 1.5em; color: rgba(0, 0, 0, 0.87); line-height: 1.285; letter-spacing: 0.25em; margin: 0.5em 0 1.3em; }
-@media screen and (min-width: 30em) { h1 { margin: 0.7em 0 1.7em; } }
+h1 { font-family: "sans", sans-serif; font-weight: 800; font-size: 1.5em; color: rgba(0, 0, 0, 0.87); line-height: 1.285; letter-spacing: 0.25em; /* 	margin: 0.5em 0 1.3em; */ /* 	@include media(30*$base) {
+		margin: 0.7*$base 0 1.7*$base;
+	} */ }
+
+.home h1 { margin: 0.5em 0 1.3em; }
+@media screen and (min-width: 30em) { .home h1 { margin: 0.7em 0 1.7em; } }
 
 form { margin-top: 1.5em; }
 form input { appearance: none; border: none; margin: 0; padding: 0; border-bottom: 2px rgba(0, 0, 0, 0.24) solid; font-family: "sans", sans-serif; font-weight: 600; font-size: 1em; color: rgba(0, 0, 0, 0.24); line-height: 1.25em; letter-spacing: 0.0625em; background: none; text-transform: uppercase; padding-bottom: 0.375em; border-radius: 0; width: 70%; }
