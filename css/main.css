@@ -146,7 +146,7 @@ header { max-width: 100%; margin-left: auto; margin-right: auto; overflow: auto;
 header:after { content: ""; display: table; clear: both; }
 @media screen and (min-width: 48em) { header { padding: 2.3576515979%; padding-bottom: 0; } }
 header nav { padding: 1em; padding-bottom: 0; overflow: auto; }
-header nav h1 { float: left; display: inline-block; padding-bottom: none; }
+header nav h1 { float: left; display: inline-block; padding-bottom: none; border: 3px solid black; padding: 5px 7px 5px 10px; margin-left: -13px; margin-top: 6px; }
 header nav h1 a { color: rgba(0, 0, 0, 0.87); text-decoration: none; }
 header nav ul { padding: 0; float: right; list-style: none; }
 header nav ul li { float: left; margin-left: 2em; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
