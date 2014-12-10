@@ -40,7 +40,7 @@ $(document).ready(function() {
 	});
 	
 	
-	$('img').baseline(24);
+// 	$('img').baseline(24);
 	
 /*
 	$('figcaption a').click(function(){
