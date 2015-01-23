@@ -1,0 +1,36 @@
+%button {
+	-webkit-font-smoothing: antialiased;
+	background-color: $base-button-color;
+	border-radius: $base-border-radius;
+	color: white;
+	display: inline-block;
+	font-size: $base-font-size;
+	line-height: $base-font-size;
+	font-weight: bold;
+// 	padding: 0.75em 1em;
+	padding: 0;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&:hover {
+// 		background-color: $hover-button-color;
+
+		color: white;
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 0.5;
+	}
+
+	&:after {
+		content: "";
+		width: $base-font-size;
+		height: .85*$base-font-size;
+		margin-left: .5*$base-font-size;
+		display: inline-block;
+		background: url(../images/right-arrow@2x.png) center center no-repeat;
+		background: url(../images/right-arrow.svg) center center no-repeat;
+		background-size: 100% 100%;
+	}
+}

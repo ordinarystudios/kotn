@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'sans';
+    src: url('../fonts/sans-regular-webfont.eot');
+    src: url('../fonts/sans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/sans-regular-webfont.woff') format('woff'),
+         url('../fonts/sans-regular-webfont.ttf') format('truetype'),
+         url('../fonts/sans-regular-webfont.svg#sansregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sans';
+    src: url('../fonts/sans-medium-webfont.eot');
+    src: url('../fonts/sans-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sans-medium-webfont.woff2') format('woff2'),
+         url('../fonts/sans-medium-webfont.woff') format('woff'),
+         url('../fonts/sans-medium-webfont.ttf') format('truetype'),
+         url('../fonts/sans-medium-webfont.svg#sansmedium') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sans';
+    src: url('../fonts/sans-bold-webfont.eot');
+    src: url('../fonts/sans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sans-bold-webfont.woff2') format('woff2'),
+         url('../fonts/sans-bold-webfont.woff') format('woff'),
+         url('../fonts/sans-bold-webfont.ttf') format('truetype'),
+         url('../fonts/sans-bold-webfont.svg#sansbold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'serif';
+    src: url('../fonts/serif-regular-webfont.eot');
+    src: url('../fonts/serif-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/serif-regular-webfont.woff2') format('woff2'),
+         url('../fonts/serif-regular-webfont.woff') format('woff'),
+         url('../fonts/serif-regular-webfont.ttf') format('truetype'),
+         url('../fonts/serif-regular-webfont.svg#serifregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'serif';
+    src: url('../fonts/serif-italic-webfont.eot');
+    src: url('../fonts/serif-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/serif-italic-webfont.woff2') format('woff2'),
+         url('../fonts/serif-italic-webfont.woff') format('woff'),
+         url('../fonts/serif-italic-webfont.ttf') format('truetype'),
+         url('../fonts/serif-italic-webfont.svg#serifitalic') format('svg');
+    font-weight: 400;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'serif';
+    src: url('../fonts/serif-bold-webfont.eot');
+    src: url('../fonts/serif-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/serif-bold-webfont.woff2') format('woff2'),
+         url('../fonts/serif-bold-webfont.woff') format('woff'),
+         url('../fonts/serif-bold-webfont.ttf') format('truetype'),
+         url('../fonts/serif-bold-webfont.svg#serifbold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'serif';
+    src: url('../fonts/serif-bolditalic-webfont.eot');
+    src: url('../fonts/serif-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/serif-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/serif-bolditalic-webfont.woff') format('woff'),
+         url('../fonts/serif-bolditalic-webfont.ttf') format('truetype'),
+         url('../fonts/serif-bolditalic-webfont.svg#serifbold_italic') format('svg');
+    font-weight: 800;
+    font-style: italic;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: $base-background-color;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $header-font-family;
+  line-height: $header-line-height;
+  margin: 0;
+  text-rendering: optimizeLegibility; // Fix the character spacing for headings
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+
+h2 {
+  font-size: $h2-font-size;
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+h5 {
+  font-size: $h5-font-size;
+}
+
+h6 {
+  font-size: $h6-font-size;
+}
+
+p {
+  margin: 0 0 ($base-spacing / 2);
+}
+
+a {
+  @include transition(color 0.1s linear);
+  color: $base-link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $hover-link-color;
+  }
+
+  &:active, &:focus {
+    color: $hover-link-color;
+    outline: none;
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $base-spacing 0;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+blockquote {
+  border-left: 2px solid $base-border-color;
+  color: lighten($base-font-color, 15);
+  margin: $base-spacing 0;
+  padding-left: $base-spacing / 2;
+}
+
+cite {
+  color: lighten($base-font-color, 25);
+  font-style: italic;
+
+  &:before {
+    content: "\2014 \00A0";
+  }
+}
+
+nav {
+	font-family: $sans-serif;
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="17px" viewBox="0 0 20 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>right-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="H.8" sketch:type="MSArtboardGroup" transform="translate(-166.000000, -599.000000)">
+            <g id="Top" sketch:type="MSLayerGroup" transform="translate(0.000000, -1.000000)">
+                <g id="Hero" sketch:type="MSShapeGroup">
+                    <g id="section.main" transform="translate(32.000000, 378.912914)">
+                        <g id="CALL-TO-ACTION" transform="translate(0.000000, 217.000000)">
+                            <g id="right-arrow" transform="translate(132.000000, 1.000000)">
+                                <rect id="Rectangle-161" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="24" height="24"></rect>
+                                <path d="M17.5549207,13.1313708 L12.2010101,18.4852814 L13.8578644,20.1421356 L21.8578644,12.1421356 L13.5735931,3.85786438 L11.9167389,5.51471863 L11.9167389,5.51471863 L17.2706494,10.8686292 L2,10.8686292 L2,13.1313708 L17.5549207,13.1313708 Z" id="right-arrow-line" fill="#FFFFFF"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
