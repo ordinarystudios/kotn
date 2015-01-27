@@ -114,7 +114,13 @@ h2 {
 }
 
 h3 {
-  font-size: $h3-font-size;
+	font-size: $h3-font-size;
+	font-family: CircularStd-Bold;
+	font-size: 16px;
+	color: #222222;
+	letter-spacing: 0.66px;
+	line-height: 28px;
+	text-transform: uppercase;
 }
 
 h4 {
@@ -130,22 +136,39 @@ h6 {
 }
 
 p {
-  margin: 0 0 ($base-spacing / 2);
+  margin: ($base-spacing / 2) 0;
+  text-indent: $base-font-size;
 }
 
-a {
-  @include transition(color 0.1s linear);
-  color: $base-link-color;
-  text-decoration: none;
-
-  &:hover {
-    color: $hover-link-color;
-  }
-
-  &:active, &:focus {
-    color: $hover-link-color;
-    outline: none;
-  }
+a.cta {
+	@include transition(color 0.1s linear);
+	color: $black; // $base-link-color;
+	text-decoration: none;
+	border-bottom: 2px solid $black;
+	font-family: $sans-serif;
+	font-weight: normal;
+	
+	&:hover {
+		color: $hover-link-color;
+	}
+	
+	&:active, &:focus {
+		color: $hover-link-color;
+		outline: none;
+	}
+	
+	&:after {
+		content: "";
+		width: $base-font-size;
+		height: .7*$base-font-size;
+		margin-left: .5*$base-font-size;
+		display: inline-block;
+		background: url(../images/right-arrow-black@2x.png) center center no-repeat;
+		background: url(../images/right-arrow-black.svg) center center no-repeat;
+		background-size: 100% 100%;
+		position: absolute;
+		margin-top: 5px;
+	}
 }
 
 hr {

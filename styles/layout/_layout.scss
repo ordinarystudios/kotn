@@ -19,64 +19,31 @@
 
 // Grid Classes 
 
-.l-l1 {
-	@include span-columns (1);
-	padding: 0 20px;
+@for $i from 1 to $grid-columns+1 {
+	
+	.l-l#{$i} {
+		@include span-columns($i of $grid-columns);
+		padding: 0 10px;
+	}
+	
 }
 
-.l-l2 {
-	@include span-columns (2);
-	padding: 0 20px;
+@for $i from -$grid-columns to $grid-columns {
+	.l-lshift#{$i} {
+		@include shift($i of $grid-columns);
+	}
 }
 
-.l-l3 {
-	@include span-columns (3);	
-	padding: 0 20px;
-}
 
-.l-l4 {
-	@include span-columns (4);
-	padding: 0 20px;	
-}
 
-.l-l5 {
-	@include span-columns (5);
-	padding: 0 20px;	
-}
 
-.l-l6 {
-	@include span-columns (6);
-	padding: 0 20px;	
-}
-
-.l-l7 {
-	@include span-columns (7);
-	padding: 0 20px;	
-}
-
-.l-l8 {
-	@include span-columns (8);	
-	padding: 0 20px;
-}
-
-.l-l9 {
-	@include span-columns (9);
-	padding: 0 20px;	
-}
-
-.l-l10 {
-	@include span-columns (10);	
-	padding: 0 20px;
-}
-
-.l-l11 {
-	@include span-columns (11);
-	padding: 0 20px;	
-}
-
-.l-l12 {
-	@include span-columns (12);	
-	padding: 0 20px;
-}
 
 // Page Specific
+
+#home {
+	.about {
+		.cta {
+			margin-top: 50px;
+		}
+	}
+}

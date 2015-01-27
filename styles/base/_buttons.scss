@@ -9,9 +9,52 @@ input[type="submit"] {
   white-space: nowrap;
 }
 
-
 button.cta {
-			
-			font-family: $sans-serif;
-			
+	font-size: $base-font-size;
+	line-height: $base-font-size;
+	font-weight: bold;
+
+
+	&--white{
+		color: $white;  
+		
+		&:after {
+			content: "";
+			width: $base-font-size;
+			height: .85*$base-font-size;
+			margin-left: .5*$base-font-size;
+			display: inline-block;
+			background: url(../images/right-arrow@2x.png) center center no-repeat;
+			background: url(../images/right-arrow.svg) center center no-repeat;
+			background-size: 100% 100%;
 		}
+	  }
+  
+  
+}
+
+%button {
+	-webkit-font-smoothing: antialiased;
+	background-color: $base-button-color;
+	border-radius: $base-border-radius;
+	display: inline-block;
+// 	padding: 0.75em 1em;
+	padding: 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	
+	font-family: $sans-serif;
+
+	&:hover {
+// 		background-color: $hover-button-color;
+
+		color: white;
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 0.5;
+	}
+
+	
+}
