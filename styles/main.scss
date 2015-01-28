@@ -75,9 +75,9 @@ header {
 	top: 0;
 	left: 0;
 */
-	position: relative;
+	position: absolute;
 	width: 100%;
-	min-height: 702px;
+	height: 100%;
 	border: 10px solid $white;
 // 	overflow: auto;
 	
@@ -132,13 +132,13 @@ header {
 }
 
 .m-hero-copy {
-	margin: $base-spacing*3 0 $base-spacing*3/2 0;
+	margin: $base-spacing*2 0; //$base-spacing*3/2 0
 	font-size: 1.5*$base-font-size;
 	line-height: 1.3;
 }
 
 .m-team {
-	
+	margin-top: $base-spacing*2;
 }
 
 .m-home-key-points {
@@ -232,6 +232,49 @@ header {
 }
 
 
+.home {
+	.m-footer {
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		&__nav {
+			padding: 10px 20px 20px;
+		}
+	}
+}
+
+
+.m-herohalf {
+	height: 500px;
+	background: $light-gray;
+	border-left: 10px solid $white;
+	border-right: 10px solid $white;
+	border-bottom: 10px solid $white;
+	
+	background-attachment: fixed;
+	background-size: 100% auto;
+	background-position: top center;
+	background-repeat: none;
+	
+	
+	&--top {
+		padding-top: 80px;
+		
+		h1 {
+			line-height: 390px;
+			color: white;
+		}
+		
+		.slogan {
+			text-align: center;
+			font-family: $serif;
+		}
+	}
+	
+	
+	
+}
+/*
 .lookbook {
 	
 	padding-top: 100px;
@@ -257,3 +300,4 @@ header {
 	}
 	
 }
+*/
