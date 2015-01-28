@@ -24,7 +24,8 @@
 		opacity: 0.5;
 	}
 
-	&:after {
+	/*
+&:after {
 		content: "";
 		width: $base-font-size;
 		height: .85*$base-font-size;
@@ -34,4 +35,5 @@
 		background: url(../images/right-arrow.svg) center center no-repeat;
 		background-size: 100% 100%;
 	}
+*/
 }

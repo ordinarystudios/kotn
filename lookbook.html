@@ -38,24 +38,22 @@
 	</header>
 	
 	<section role="main" class="m-lookbook">
-		<ul class="l-row">
-			<li><img src="images/demo/lookbook-1.jpg" alt="" /></li>
-			<li><img src="images/demo/lookbook-2.jpg" alt="" /></li>
-			<li><img src="images/demo/lookbook-3.jpg" alt="" /></li>
-			<li><img src="images/demo/lookbook-4.jpg" alt="" /></li>
-			<li><img src="images/demo/lookbook-5.jpg" alt="" /></li>
-			<li><img src="images/demo/lookbook-6.jpg" alt="" /></li>
-			<li><img src="images/demo/lookbook-7.jpg" alt="" /></li>
-			<li><img src="images/demo/lookbook-8.jpg" alt="" /></li>
-			<li><img src="images/demo/lookbook-9.jpg" alt="" /></li>
-			<li><img src="images/demo/lookbook-10.jpg" alt="" /></li>
-			<li><img src="images/demo/lookbook-11.jpg" alt="" /></li>
-			<li><img src="images/demo/lookbook-12.jpg" alt="" /></li>
-			<li><img src="images/demo/lookbook-13.jpg" alt="" /></li>
-			<li><img src="images/demo/lookbook-14.jpg" alt="" /></li>
-			<li><img src="images/demo/lookbook-15.jpg" alt="" /></li>
-			<li><img src="images/demo/lookbook-16.jpg" alt="" /></li>
-		</ul>
+  
+  
+  
+  
+  <div id="gallery">
+  	<img width="auto" height="auto" src="images/demo/lookbook-1.jpg" alt="" />
+  	<img width="auto" height="auto" src="images/demo/lookbook-2.jpg" alt="" />
+  	<img width="auto" height="auto" src="images/demo/lookbook-3.jpg" alt="" />
+  	<img width="auto" height="auto" src="images/demo/lookbook-4.jpg" alt="" />
+  	<img width="auto" height="auto" src="images/demo/lookbook-5.jpg" alt="" />
+  	<img width="auto" height="auto" src="images/demo/lookbook-6.jpg" alt="" />
+  </div>
+  
+  
+  
+  
 	</section>
 
 	<footer class="m-footer l-row">
@@ -80,7 +78,36 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     <script src="scripts/plugins.js"></script>
+    <script src="scripts/vendor/imagesloaded.pkgd.min.js"></script>
+    <script src="scripts/vendor/flickity.pkgd.min.js"></script>
     <script src="scripts/main.js"></script>
+
+    <script>
+	    
+	$(document).ready(function() {
+		
+		$("#gallery img").height(function(){
+			return ($(window).innerHeight()-90);
+		});
+		
+		var flky = new Flickity( '#gallery', {
+		  accessibility: true,
+		  cellAlign: 'center',
+		  draggable: true,
+		  freeScroll: false,
+		  friction: 0.2,
+		  imagesLoaded: true,
+		  initialIndex: 0,
+		  percentPosition: false,		
+		  prevNextButtons: true,
+		  pageDots: false,
+		  resizeBound: true,
+		  watchCSS: false,
+		  wrapAround: true
+		});
+	
+	});
+    </script>
     
     <script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
