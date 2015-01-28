@@ -1032,6 +1032,8 @@ header {
   background-size: cover;
   background-position: top center;
   background-repeat: none; }
+  .m-herohalf h1, .m-herohalf h3, .m-herohalf p {
+    text-shadow: rgba(0, 0, 0, 0.32) 0 0 24px; }
   .m-herohalf h3 {
     font-weight: 400;
     letter-spacing: 2px; }
