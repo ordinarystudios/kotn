@@ -22,7 +22,7 @@ header {
 .m-globalnav {
 	
 	line-height: 40px;
-	padding: 20px;
+	padding: 20px 30px;
 	
 	@include span-columns(12);
 	
@@ -46,6 +46,10 @@ header {
 			width: 78px;
 			height: 18px;
 			
+			&:focus {
+				border: none;
+				outline: none;
+			}
 		}
 	}
 	
@@ -62,12 +66,19 @@ header {
 	a {
 		color: $nav-link-color;
 		text-decoration: none;
-		font-size: .875*$base-font-size;
+		font-size: .75*$base-font-size;
 // 		color: $white;
 		letter-spacing: 2px;
 		font-weight: 600;
+		
+		&:focus {
+				border: none;
+				outline: none;
+			}
 	}
 }
+
+
 
 .m-splash {
 /*
@@ -82,15 +93,15 @@ header {
 	
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
+	background-attachment: scroll;
 	background-size: cover;
 	
 // 	overflow: auto;
 	
 	.hero-copy {
 		font-size: 2.4*$base-font-size;
-		font-weight: bold;
-		line-height: 1.2;
+		font-weight: 400;
+		line-height: 1;
 		text-indent: 0;
 		margin-top: 0;
 	}
@@ -104,7 +115,7 @@ header {
 		.m-callout {
 			
 			position: absolute;
-			bottom: 100px;
+			bottom: 30px;
 			left: 30px
 			
 		}
@@ -136,6 +147,43 @@ header {
 			background: url(../images/small-down-arrow.svg) center center no-repeat;
 			background-size: 100% 100%;
 		}
+}
+
+.m-socialnav {
+	float: left;
+	display: block;
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	
+	ul {
+		float: left;
+		display: block;
+		
+		li {
+			float: left;
+			display: block;
+			margin-left: 15px;
+			
+			a {
+				float: left;
+				display: block;
+				width: 20px;
+				height: 20px;
+				
+				&:focus {
+					outline: none;
+					border: none;
+				}
+				
+				img {
+					width: 20px;
+					height: 20px;
+					fill: white;
+				}
+			}
+		}
+	}
 }
 
 .m-hero-copy {
@@ -187,7 +235,29 @@ header {
 		text-indent: 0;
 	}
 
+}
 
+
+.m-product {
+	.copy {
+		
+		text-align: center;
+		
+		h4 {
+			opacity: 0;
+			margin: 0;
+			position: relative;
+			top: -50px;
+			transition: 0.54s all ease-in-out;
+		}
+		
+		
+	}
+	&:hover {
+		.copy h4 {
+			opacity: 1;
+		}
+	}
 }
 
 
