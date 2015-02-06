@@ -889,6 +889,9 @@ header {
         outline: none; }
   .m-globalnav ul {
     float: right; }
+    @media screen and (min-width: 420px) {
+      .m-globalnav ul {
+        display: none; } }
   .m-globalnav li {
     float: left;
     text-transform: uppercase;
@@ -1169,7 +1172,8 @@ header {
 #gallery {
   padding-top: 80px; }
   #gallery img {
-    padding: 0 5px; }
+    padding: 0 5px;
+    max-width: none; }
 
 /* Flickity
 ------------------------- */

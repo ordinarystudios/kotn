@@ -55,6 +55,10 @@ header {
 	
 	ul {
 		float: right;
+		
+		@include media(420px) {
+			display: none;
+		}
 	}
 	
 	li {
@@ -481,6 +485,7 @@ header {
 	
 	img {
 		padding: 0 5px;
+		max-width: none;
 	}
 }
 
