@@ -57,7 +57,7 @@ header {
 		float: right;
 		display: none;
 		
-		@include media(420px) {
+		@include media(570px) {
 			display: inline-block;
 		}
 	}

@@ -890,7 +890,7 @@ header {
   .m-globalnav ul {
     float: right;
     display: none; }
-    @media screen and (min-width: 420px) {
+    @media screen and (min-width: 570px) {
       .m-globalnav ul {
         display: inline-block; } }
   .m-globalnav li {
