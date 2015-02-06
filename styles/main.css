@@ -888,10 +888,11 @@ header {
         border: none;
         outline: none; }
   .m-globalnav ul {
-    float: right; }
+    float: right;
+    display: none; }
     @media screen and (min-width: 420px) {
       .m-globalnav ul {
-        display: none; } }
+        display: inline-block; } }
   .m-globalnav li {
     float: left;
     text-transform: uppercase;

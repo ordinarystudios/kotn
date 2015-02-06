@@ -55,9 +55,10 @@ header {
 	
 	ul {
 		float: right;
+		display: none;
 		
 		@include media(420px) {
-			display: none;
+			display: inline-block;
 		}
 	}
 	
