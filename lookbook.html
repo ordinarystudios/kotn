@@ -90,6 +90,12 @@
 			return ($(window).innerHeight()-90);
 		});
 		
+		$( window ).resize(function() {
+			$("#gallery img").height(function(){
+				return ($(window).innerHeight()-90);
+			});
+		});
+		
 		var flky = new Flickity( '#gallery', {
 		  accessibility: true,
 		  cellAlign: 'center',
