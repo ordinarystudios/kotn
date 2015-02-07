@@ -86,6 +86,21 @@
 	    
 	$(document).ready(function() {
 		
+		/*
+var images = $('img');
+		$('.bg-img').each(function(){
+		  var el = $(this)
+		    , image = el.css('background-image').match(/url\((['"])?(.*?)\1\)/);
+		  if(image)
+		    images = images.add($('<img>').attr('src', image.pop()));
+		});
+		images.imagesLoaded();
+		
+		$('body').imagesLoaded( function() {
+			$('img').fadeTo("slow" , 1);
+		});
+*/
+		
 		$("#gallery img").height(function(){
 			return ($(window).innerHeight()-90);
 		});

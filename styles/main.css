@@ -1174,7 +1174,8 @@ header {
   padding-top: 80px; }
   #gallery img {
     padding: 0 5px;
-    max-width: none; }
+    max-width: none;
+    opacity: 0; }
 
 /* Flickity
 ------------------------- */
